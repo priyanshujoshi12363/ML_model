@@ -11,3 +11,16 @@ class IndraInput(BaseModel):
     hour: int
     location_risk: int
     curfew: int
+    
+    
+
+class DhanInput(BaseModel):
+    risk_score: float
+    hours_disrupted: float
+    avg_earnings: float    
+    
+class KavachInput(BaseModel):
+    speed: float
+    claims_last_4h: int
+    gps_distance: float
+    risk_score: float
