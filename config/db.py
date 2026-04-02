@@ -1,8 +1,16 @@
+import os
 from pymongo import MongoClient
+from dotenv import load_dotenv
 
-MONGO_URL = "mongodb+srv://USERNAME:PASSWORD@cluster0.o4fk3jd.mongodb.net/?retryWrites=true&w=majority"
+# Load .env
+load_dotenv()
 
+# Get URL from env
+MONGO_URL = os.getenv("MONGO_URL")
+
+# Connect
 client = MongoClient(MONGO_URL)
 
-db = client["test"]  # change if your DB name is different
+# Database
+db = client["test"]   # change if needed
 drivers_collection = db["drivers"]
