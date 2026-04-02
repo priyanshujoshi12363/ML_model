@@ -15,10 +15,10 @@ class IndraInput(BaseModel):
     
 
 class DhanInput(BaseModel):
+    user_id: str
     risk_score: float
     hours_disrupted: float
-    avg_earnings: float    
-    
+    avg_earnings: float
 class KavachInput(BaseModel):
     speed: float
     claims_last_4h: int
